@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs32qxajbk34q"]
+
+[ext_resource type="Script" uid="uid://bmuxk8rx8kmqu" path="res://player.gd" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://c5y0wmwl3boab" path="res://dodge_the_creeps_2d_assets/dodge_the_creeps_2d_assets/man.png" id="2_onrkg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3pqv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onrkg")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(32, 81)
+
+[node name="Player" type="Area2D"]
+position = Vector2(1, -2)
+script = ExtResource("1_sweqy")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_i3pqv")
+animation = &"1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_hqtel")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

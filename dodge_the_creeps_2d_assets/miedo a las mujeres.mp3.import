@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://di7gdflsuwpgg"
+path="res://.godot/imported/miedo a las mujeres.mp3-707ac56b0dd194a40b7fe222851f1a52.mp3str"
+
+[deps]
+
+source_file="res://dodge_the_creeps_2d_assets/miedo a las mujeres.mp3"
+dest_files=["res://.godot/imported/miedo a las mujeres.mp3-707ac56b0dd194a40b7fe222851f1a52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
